@@ -24,7 +24,7 @@ from sklearn.model_selection import cross_val_predict
 import matplotlib.pyplot as plt 
 import seaborn as sns
 
-''' develop the best predictive model based on the chemical engineering dataset'''
+''' develop the best predictive model based on the cervical cancer dataset'''
 
 __author__ = 'Jacob Hajjar'
 __email__ = 'hajjarj@csu.fullerton.edu'
