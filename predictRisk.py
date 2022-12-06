@@ -70,7 +70,8 @@ def predict_risk(scalar, model, mean, cancer_factors):
     "STDs:vaginal condylomatosis","STDs:vulvo-perineal condylomatosis","STDs:syphilis","STDs:pelvic inflammatory disease",
     "STDs:genital herpes","STDs:molluscum contagiosum","STDs:AIDS","STDs:HIV","STDs:Hepatitis B","Dx:HPV","STDs: Number of diagnosis"""
     x_scaled = scalar.transform(cancer_factors)
-    cancer_prob = model.predict_proba(x_scaled)
+
+    cancer_prob = model.predict_proba(x_scaled)[0][1]
     risk_level = 1
     if cancer_prob > mean:
         risk_level = 2
